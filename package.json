@@ -1,0 +1,22 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "A beginner-friendly full-stack Task Manager CRUD application built with Node.js, Express.js, HTML, CSS, and Vanilla JavaScript.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "task-manager",
+    "crud",
+    "express",
+    "nodejs",
+    "vanilla-javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
+

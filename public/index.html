@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <!-- Link to our own stylesheet (no frameworks) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Main centered container -->
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>📝 Task Manager</h1>
+      <p>Create, update, complete and delete your tasks.</p>
+    </header>
+
+    <!-- Message area (success / error messages appear here) -->
+    <div id="message" class="message" role="status" aria-live="polite"></div>
+
+    <!-- Create / Update form -->
+    <form id="task-form" class="card form-card">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="Enter task title..."
+        autocomplete="off"
+        maxlength="100"
+      />
+      <button type="submit" id="submit-btn" class="btn btn-primary">
+        Add Task
+      </button>
+    </form>
+
+    <!-- Search and filter bar -->
+    <div class="toolbar">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="🔍 Search tasks..."
+        autocomplete="off"
+      />
+      <div class="filters">
+        <button class="btn filter-btn active" data-filter="all">All</button>
+        <button class="btn filter-btn" data-filter="pending">Pending</button>
+        <button class="btn filter-btn" data-filter="completed">Completed</button>
+      </div>
+    </div>
+
+    <!-- Loading spinner (shown while tasks are being fetched) -->
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Loading tasks...</p>
+    </div>
+
+    <!-- Task list container -->
+    <div id="task-list" class="task-list"></div>
+
+  </div>
+
+  <!-- Link to our own script (no frameworks) -->
+  <script src="script.js"></script>
+</body>
+</html>
+
